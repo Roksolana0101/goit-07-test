@@ -1,0 +1,121 @@
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: 480px) {
+        width: 480px;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 768px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 1280px;
+    }
+}
+
+/*ЗАГОЛОВОК СЕКЦІЇ*/
+.favorites__title {
+    font-size: 28px;
+    line-height: calc(33 / 28);
+    text-align: center;
+    color: var(--pimary-text-color);
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .favorites__title {
+        font-size: 42px;
+        line-height: 1.16;
+    }
+}
+
+/*ТЕКСТ СЕКЦІЇ*/
+.favorites__text {
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    text-align: center;
+    color: var(--pimary-text-color);
+    margin-bottom: 60px;
+}
+
+@media screen and (min-width: 768px) {
+    .favorites__text {
+        font-size: 16px;
+        line-height: 1.16;
+    }
+}
+
+/*СПИСОК СЕКЦІЇ*/
+.favorites__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .favorites__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px;
+        flex-basis: calc((100% - 32px) / 3);
+    }
+}
+
+/*ЕЛЕМЕНТ СПИСКА*/
+.favorites__item {
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+}
+
+.favorites__item:nth-child(n + 4) {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .favorites__item:nth-child(n + 4) {
+        display: flex;
+    }
+}
+
+/*ОБГОРТКА КАРТИНКИ (ЖОВТИЙ КРУЖОК)*/
+.favorites__wrapper {
+    cursor: pointer;
+    padding-top: 18px;
+    padding-right: 17px;
+    padding-bottom: 18px;
+    padding-left: 17px;
+    border: 11px solid #ffe550;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+    .favorites__wrapper {
+        border: 14px solid #ffe550;
+        padding: 21px 20px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .favorites__wrapper {
+        border: 16px solid #ffe550;
+        padding: 25px 24px;
+    }
+}
+
+.favorites__wrapper:hover {
+    border-color: #bbf330;
+}
