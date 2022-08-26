@@ -1,26 +1,36 @@
+:root {
+    --pimary-text-color: #2c2c2c;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: var(--pimary-text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
 .section {
     padding-top: 60px;
     padding-bottom: 60px;
 }
 
-.container {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left: auto;
-    margin-right: auto;
 
-    @media screen and (min-width: 480px) {
-        width: 480px;
-    }
-
-    @media screen and (min-width: 768px) {
-        width: 768px;
-    }
-
-    @media screen and (min-width: 1280px) {
-        width: 1280px;
-    }
-}
 
 /*ЗАГОЛОВОК СЕКЦІЇ*/
 .favorites__title {
@@ -29,14 +39,14 @@
     text-align: center;
     color: var(--pimary-text-color);
     margin-bottom: 20px;
+    @media screen and (min-width: 768px) {
+          
+                font-size: 42px;
+                line-height: 1.16;
+            
+        }
 }
 
-@media screen and (min-width: 768px) {
-    .favorites__title {
-        font-size: 42px;
-        line-height: 1.16;
-    }
-}
 
 /*ТЕКСТ СЕКЦІЇ*/
 .favorites__text {
@@ -45,32 +55,34 @@
     text-align: center;
     color: var(--pimary-text-color);
     margin-bottom: 60px;
+    @media screen and (min-width: 768px) {
+   
+                font-size: 16px;
+                line-height: 1.16;
+            
+        }
 }
 
-@media screen and (min-width: 768px) {
-    .favorites__text {
-        font-size: 16px;
-        line-height: 1.16;
-    }
-}
 
 /*СПИСОК СЕКЦІЇ*/
 .favorites__list {
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @media screen and (min-width: 768px) {
+          
+                /*display: flex;*/
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 32px;
+               /* flex-basis: calc((100% - 32px) / 2);*/
+            
+        }
 }
 
-@media screen and (min-width: 768px) {
-    .favorites__list {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 32px;
-        flex-basis: calc((100% - 32px) / 3);
-    }
-}
+
 
 /*ЕЛЕМЕНТ СПИСКА*/
 .favorites__item {
@@ -82,13 +94,27 @@
 
 .favorites__item:nth-child(n + 4) {
     display: none;
+
+    @media screen and (min-width: 768px) {
+      
+                display: flex;
+            
+        }
 }
 
-@media screen and (min-width: 768px) {
-    .favorites__item:nth-child(n + 4) {
-        display: flex;
-    }
-}
+
+/*.favorites__item:nth-child(n + 4) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}*/
 
 /*ОБГОРТКА КАРТИНКИ (ЖОВТИЙ КРУЖОК)*/
 .favorites__wrapper {
@@ -109,7 +135,7 @@
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1280px) {
     .favorites__wrapper {
         border: 16px solid #ffe550;
         padding: 25px 24px;
