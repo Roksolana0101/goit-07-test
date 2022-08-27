@@ -1,0 +1,41 @@
+.hero-section {
+    background:  #ffffff;
+  
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+     
+    background-size: cover;
+    text-align: center;
+  
+   
+  
+    @media screen and (max-width: 767px) {
+      background-image: 
+        url(../images/hero-bg_@1x_sm.jpg);
+  
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: 
+          url(../images/hero-bg_@2x_sm.jpg);
+      }
+      
+    }
+
+}
+
+.offerings{
+    background:  #fff;
+  
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+   background-size: cover;
+    text-align: center;
+    background-image: 
+    url(../images/hero-bg_@1x_sm.jpg)
+  
+  
+  }
+  
+  
