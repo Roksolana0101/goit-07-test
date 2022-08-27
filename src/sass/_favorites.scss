@@ -1,10 +1,10 @@
 :root {
-    --pimary-text-color: #2c2c2c;
+  --pimary-text-color: #2c2c2c;
 }
 
 body {
-    font-family: "Roboto", sans-serif;
-    color: var(--pimary-text-color);
+  font-family: 'Roboto', sans-serif;
+  color: var(--pimary-text-color);
 }
 
 h1,
@@ -13,144 +13,108 @@ h3,
 h4,
 ul,
 p {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-    object-position: center;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  /*  object-fit: cover;
+    object-position: center;*/
 }
-
-
-
-
 
 /*ЗАГОЛОВОК СЕКЦІЇ*/
 .favorites__title {
-    font-size: 28px;
-    line-height: calc(33 / 28);
-    text-align: center;
-    color: var(--pimary-text-color);
-    margin-bottom: 20px;
-    @media screen and (min-width: 768px) {
-          
-                font-size: 42px;
-                line-height: 1.16;
-            
-        }
+  font-size: 28px;
+  line-height: calc(33 / 28);
+  text-align: center;
+  color: var(--pimary-text-color);
+  margin-bottom: 20px;
+  @media screen and (min-width: 768px) {
+    font-size: 42px;
+    line-height: 1.16;
+  }
 }
-
 
 /*ТЕКСТ СЕКЦІЇ*/
 .favorites__text {
-    font-size: 14px;
-    line-height: calc(16 / 14);
-    text-align: center;
-    color: var(--pimary-text-color);
-    margin-bottom: 60px;
-    @media screen and (min-width: 768px) {
-   
-                font-size: 16px;
-                line-height: 1.16;
-            
-        }
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-align: center;
+  color: var(--pimary-text-color);
+  margin-bottom: 60px;
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    line-height: 1.16;
+  }
 }
-
 
 /*СПИСОК СЕКЦІЇ*/
 .favorites__list {
-list-style: none;
-   
-    display: flex;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
     flex-wrap: wrap;
-    gap: 20px;
-  
-justify-content: center;
-  
-  /*
-    display: flex;
-    flex-direction: column;
-    gap: 20px;*/
-
-    @media screen and (min-width: 768px) {
-          
-                /*display: flex;*/
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 32px;
-               /* flex-basis: calc((100% - 32px) / 2);*/
-            
-        }
+    justify-content: space-between;
+    gap: 32px;
+  }
 }
-
-
 
 /*ЕЛЕМЕНТ СПИСКА*/
-.favorites__item {
-@media screen and(min-width: 768px) {
-        flex-basis: calc((100% - 32px) / 2);
-    }
-
-    @media screen and(min-width: 1280px) {
-        flex-basis: calc((100% - 90px) / 4);
-    }}
-
 .favorites__item:nth-child(n + 4) {
-    display: none;
+  display: none;
 
-    @media screen and (min-width: 768px) {
-      
-                display: flex;
-            
-        }
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
 }
+.favorites__item {
+  display: block;
+  @media screen and(min-width: 768px) {
+    flex-basis: calc((100% - 96px) / 2);
 
+    flex-grow: 1;
+  }
 
-/*.favorites__item:nth-child(n + 4) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}*/
+  @media screen and(min-width: 1280px) {
+    flex-basis: calc((100% - 96px) / 3);
+  }
+}
 
 /*ОБГОРТКА КАРТИНКИ (ЖОВТИЙ КРУЖОК)*/
 .favorites__wrapper {
-    
-    cursor: pointer;
-    padding-top: 18px;
-    padding-right: 17px;
-    padding-bottom: 18px;
-    padding-left: 17px;
-    border: 11px solid #ffe550;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-@media screen and (min-width: 768px) {
+  display: inline-block;
+  cursor: pointer;
+  padding-top: 18px;
+  padding-right: 17px;
+  padding-bottom: 18px;
+  padding-left: 17px;
+  border: 11px solid #ffe550;
+  border-radius: 50%;
+  overflow: hidden;
+transition: border-color 1s cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (min-width: 768px) {
     .favorites__wrapper {
-        border: 14px solid #ffe550;
-        padding: 21px 20px;
+      border: 14px solid #ffe550;
+      padding: 21px 20px;
     }
-}
 
-@media screen and (min-width: 1280px) {
-    .favorites__wrapper {
+    @media screen and (min-width: 1280px) {
+      .favorites__wrapper {
         border: 16px solid #ffe550;
         padding: 25px 24px;
+      }
     }
-}
-
-.favorites__wrapper:hover {
-    border-color: #bbf330;
+    &:hover,
+    &:focus {
+      border-color: #bbf330;
+    }
+  }
 }
